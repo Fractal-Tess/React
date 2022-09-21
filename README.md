@@ -22,4 +22,4 @@
   - Tauri store plugin
 - Automation
   - Husky
-  - TODO: Test
+  - TODO: Testing
