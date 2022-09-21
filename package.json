@@ -12,7 +12,7 @@
     "postinstall": "husky install"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,cjs,json,css}": [
+    "*.{ts,tsx,js,json,css}": [
       "prettier --write",
       "eslint"
     ]
@@ -38,6 +38,7 @@
     "daisyui": "^2.29.0",
     "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
