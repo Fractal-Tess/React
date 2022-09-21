@@ -1,4 +1,4 @@
-# React starter template
+# React <img src="https://raw.githubusercontent.com/Fractal-Tess/React/main/public/react.png" width="30" align='center'/>
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/Fractal-Tess/React/main/public/app.jpg" width="580" style="border-radius:2rem"/>
