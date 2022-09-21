@@ -1,70 +1,99 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+@import '@fontsource/roboto/index.css';
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+* {
+  @apply transition-all duration-75;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
   }
-  a:hover {
-    color: #747bff;
+
+  ::-webkit-scrollbar {
+    @apply w-2;
   }
-  button {
-    background-color: #f9f9f9;
+  ::-webkit-scrollbar-track {
+    @apply bg-base-300;
   }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-base-content/30 border-2 border-secondary rounded-xl;
+  }
+}
+
+@layer utilities {
+  /* Class is used for development and debugining purposes. */
+  .dev {
+    border: 2px solid red;
+  }
+}
+
+/* Theme toggle classes */
+.theme-toggle-btn {
+  --transition-duration-long: 0.4s;
+  --ease-in: cubic-bezier(0.25, 0, 0.3, 1);
+  --ease-out: cubic-bezier(0, 0, 0, 1);
+  --ease-eleastic-1: cubic-bezier(0.5, 1.25, 0.75, 1.25);
+  --ease-eleastic-2: cubic-bezier(0.5, 1.5, 0.75, 1.25);
+}
+
+svg .moon,
+svg .sun,
+svg .sun-beams {
+  transform-origin: center center;
+}
+
+.light svg .sun {
+  transform: scale(1.75);
+}
+
+.light svg .sun-beams {
+  opacity: 0;
+}
+
+.light svg .moon > circle {
+  transform: translateX(-7px);
+}
+
+.light svg .moon > circle {
+  transform: translateX(0);
+  cx: 17;
+}
+
+svg .sun {
+  transition: transform var(--transition-duration-long) var(--ease-eleastic-1);
+}
+
+svg .sun-beams {
+  transition: transform var(--transition-duration-long) var(--ease-eleastic-2),
+    opacity var(--transition-duration-long) var(--ease-in);
+}
+
+svg .moon > circle {
+  transition: transform calc(var(--transition-duration-long) / 2)
+    var(--ease-out);
+}
+
+svg .moon > circle {
+  transition: cx calc(var(--transition-duration-long) / 2) var(--ease-out);
+}
+
+.light svg .sun {
+  transform: scale(1.75);
+  transition-timing-function: var(--ease-in);
+  transition-duration: calc(var(--transition-duration-long) / 2);
+}
+
+.light svg .sun-beams {
+  transform: rotateZ(-25deg);
+  transition-duration: calc(var(--transition-duration-long) / 3);
+}
+
+.light svg .moon > circle {
+  transition-delay: calc(var(--transition-duration-long) / 2);
+  transition-duration: var(--transition-duration-long);
 }

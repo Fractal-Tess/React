@@ -17,7 +17,10 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "$styles": ["src/styles/index.css"]
+      "$styles": ["src/styles/index.css"],
+      "$types": ["src/types/index.ts"],
+      "$context/*": ["src/context/*"],
+      "$components/*": ["src/components/*"]
     }
   },
   "include": ["src"],
