@@ -5,7 +5,10 @@ export default function ThemeToggle() {
   const tc = useContext(ThemeCtx);
 
   return (
-    <button className="p-1 theme-toggle-btn" onClick={tc?.toggleTheme}>
+    <button
+      className="p-1 theme-toggle-btn hover:text-primary"
+      onClick={tc?.toggleTheme}
+    >
       <svg className="h-6 md:h-8" aria-hidden="true" viewBox="0 0 24 24">
         <mask className="moon" id="moon-mask">
           <rect x="0" y="0" width="100%" height="100%" fill="white" />
