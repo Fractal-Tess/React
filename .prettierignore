@@ -1,22 +1,5 @@
-# v 0.2
 # Minified files 
 *.min.*
-*.min.*
-
-# Husky
-.husky/*
-
-# Git
-.gitignore
-
-# Eslint
-.eslintignore 
-
-# Prettier
-.prettierignore
-
-# Markdown files
-*.md
 
 # Pnpm
 pnpm-lock.yaml
@@ -36,7 +19,8 @@ pids
 
 ## Build files
 
-# Common
+# Common build output
+target
 build
 release
 dist
