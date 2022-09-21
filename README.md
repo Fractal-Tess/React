@@ -16,7 +16,10 @@
 - Code Quality
   - Prettier
   - Eslint
+  - Lint-Staged
 - Tauri
   - Tauri window state manager plugin
   - Tauri store plugin
+- Automation
   - Husky
+  - TODO: Test
