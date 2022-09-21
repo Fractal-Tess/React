@@ -12,7 +12,7 @@
     "postinstall": "husky install"
   },
   "lint-staged": {
-    "*": [
+    "*.{ts,tsx,js,cjs,json,css}": [
       "prettier --write",
       "eslint"
     ]
