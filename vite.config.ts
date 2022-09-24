@@ -10,7 +10,14 @@ export default defineConfig({
       $styles: path.join(__dirname, 'src/styles/index.css'),
       $types: path.join(__dirname, 'src/types/index.ts'),
       $context: path.join(__dirname, 'src/context'),
-      $components: path.join(__dirname, 'src/components'),
-    },
+      $assets: path.join(__dirname, 'src/assets'),
+      $components: path.join(__dirname, 'src/components')
+    }
   },
+  publicDir: path.join(__dirname, 'src/assets'),
+  server: {
+    host: '::',
+    port: 3000,
+    strictPort: true
+  }
 });
