@@ -4,10 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  @apply transition-all duration-75;
-}
-
 @layer base {
   html {
     -webkit-font-smoothing: antialiased;
