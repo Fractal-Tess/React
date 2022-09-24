@@ -1,7 +1,7 @@
 # React <img src="https://raw.githubusercontent.com/Fractal-Tess/React/main/src/assets/react.svg" width="30" align='center'/>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/Fractal-Tess/React/main/public/app.jpg" width="580" style="border-radius:2rem"/>
+<img src="https://raw.githubusercontent.com/Fractal-Tess/React/main/src/assets/app.png" width="580" style="border-radius:2rem"/>
 </div>
 </div>
 
