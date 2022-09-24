@@ -23,7 +23,7 @@ const defaultVariants: Variants = {
 };
 
 const defaultTransition: Transition = {
-  ease: 'linear',
+  ease: 'easeOut',
   duration: 0.9,
   delay: 0.3
 };
