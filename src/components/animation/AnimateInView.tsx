@@ -18,14 +18,14 @@ type Props = {
 } & PropsWithChildren;
 
 const defaultVariants: Variants = {
-  visible: { opacity: 1, scale: 1, y: 0 },
-  hidden: { opacity: 0, scale: 0, y: -100 }
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 }
 };
 
 const defaultTransition: Transition = {
   ease: 'easeOut',
-  duration: 0.9,
-  delay: 0.3
+  duration: 1.5,
+  delay: 0.4
 };
 
 export default function GenericAnimation({
