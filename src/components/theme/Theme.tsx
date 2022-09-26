@@ -32,9 +32,7 @@ export default function Theme(props: React.PropsWithChildren) {
 
   return (
     <ThemeCtx.Provider value={{ theme, toggleTheme }}>
-      <div className="bg-gradient-to-t from-base-300 to-base-100">
-        {props.children}
-      </div>
+      {props.children}
     </ThemeCtx.Provider>
   );
 }

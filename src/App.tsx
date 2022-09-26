@@ -1,20 +1,22 @@
-import AnimateInView from '$components/animation/AnimateInView';
-import Footer from '$components/core/Footer';
-import Header from '$components/core/Header';
-import Main from '$components/core/Main';
-import Theme from '$components/theme/Theme';
+import Home from '$components/routes/Home';
+import Layout from '$components/layout/Layout';
+import { Route, Routes } from 'react-router-dom';
+import NotFound from '$components/routes/NotFound';
+import About from '$components/routes/About';
+import Blog from '$components/routes/Blog';
+import Contact from '$components/routes/Contact';
 
 function App() {
   return (
-    <Theme>
-      <AnimateInView>
-        <div className="min-h-screen flex flex-col justify-between">
-          <Header />
-          <Main />
-          <Footer />
-        </div>
-      </AnimateInView>
-    </Theme>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/blog" element={<Blog />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Route>
+    </Routes>
   );
 }
 

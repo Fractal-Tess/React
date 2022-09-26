@@ -1,10 +1,13 @@
 import '$styles';
 import App from './App';
-import { StrictMode } from 'react';
+import react from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+  <react.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </react.StrictMode>
 );
