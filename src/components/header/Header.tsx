@@ -2,6 +2,7 @@ import Anchor from '$components/anchor/Anchor';
 import ThemeToggle from '$components/buttons/ThemeToggle';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { NavLink } from 'react-router-dom';
+import logo from '$assets/react.svg';
 
 // TODO: Is active
 type Link = {
@@ -21,7 +22,9 @@ const NavLinks: Link[] = [
 export default function Header() {
   return (
     <nav className="bg-base-100 h-12 flex justify-between px-8 items-center shadow-xl ">
-      <div>{/* Logo */}</div>
+      <div className="h-full">
+        <img src={logo} alt="Website logo" className="h-full py-2" />
+      </div>
 
       <div className="flex space-x-8 text-xl font-bold">
         {NavLinks.map(({ to, text }, i) => {
