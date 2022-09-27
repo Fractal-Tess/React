@@ -23,7 +23,13 @@ export default function Header() {
   return (
     <nav className="bg-base-100 h-12 flex justify-between px-8 items-center shadow-xl ">
       <div className="h-full">
-        <img src={logo} alt="Website logo" className="h-full py-2" />
+        <NavLink to="/">
+          <img
+            src={logo}
+            alt="Website logo"
+            className="object-contain max-h-full py-2"
+          />
+        </NavLink>
       </div>
 
       <div className="flex space-x-8 text-xl font-bold">
