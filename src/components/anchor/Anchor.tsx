@@ -1,23 +1,27 @@
-import type { Link } from '$types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { PropsWithChildren } from 'react';
+
+type Props = {
+  newTab?: boolean;
+  rel?: 'noopener noreferrer';
+  href: string;
+  className?: string;
+} & PropsWithChildren;
 
 export default function Anchor({
-  target,
-  classes: style,
-  textContent,
-  icon
-}: Link) {
+  href,
+  newTab,
+  rel,
+  children,
+  className
+}: Props) {
   return (
     <a
-      href={target.href}
-      target={target.openInNewTab ? '_blank' : '_self'}
-      className={style?.anchorClass}
+      href={href}
+      rel={rel}
+      target={newTab ? '_blank' : '_self'}
+      className={className}
     >
-      {textContent?.prefix && (
-        <span className={style?.prefixClass}>{textContent.prefix}</span>
-      )}
-      {textContent?.text}
-      {icon && <FontAwesomeIcon icon={icon} className={style?.iconClass} />}
+      {children}
     </a>
   );
 }

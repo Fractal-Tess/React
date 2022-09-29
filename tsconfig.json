@@ -20,6 +20,7 @@
       "$styles": ["src/styles/index.css"],
       "$types": ["src/types/index.ts"],
       "$context/*": ["src/context/*"],
+      "$layout/*": ["src/layout/*"],
       "$assets/*": ["src/assets/*"],
       "$components/*": ["src/components/*"]
     }

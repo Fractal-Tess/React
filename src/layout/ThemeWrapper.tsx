@@ -1,5 +1,5 @@
 import { ThemeCtx } from '$context/theme';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState, type PropsWithChildren } from 'react';
 import type { Theme as TypeTheme } from '$types';
 
 const invertTheme = (theme: TypeTheme) => (theme === 'dark' ? 'light' : 'dark');
@@ -15,7 +15,8 @@ const getTheme = (): TypeTheme => {
   }
   return theme;
 };
-export default function Theme(props: React.PropsWithChildren) {
+
+export default function Theme(props: PropsWithChildren) {
   const [theme, setTheme] = useState<TypeTheme>(getTheme());
 
   const toggleTheme = () => {
