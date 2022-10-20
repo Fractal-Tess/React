@@ -12,7 +12,8 @@ export default defineConfig({
       $context: path.join(__dirname, 'src/context'),
       $layout: path.join(__dirname, 'src/layout'),
       $assets: path.join(__dirname, 'src/assets'),
-      $components: path.join(__dirname, 'src/components')
+      $components: path.join(__dirname, 'src/components'),
+      $routes: path.join(__dirname, 'src/routes')
     }
   },
   publicDir: path.join(__dirname, 'src/assets'),
