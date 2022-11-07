@@ -1,35 +1,27 @@
 import { NavLink } from 'react-router-dom';
+import type { NavLink as NL } from '$types/NavLink';
 
-type LinkType = {
-  to: string;
-  text: string;
+type Props = {
+  navLinks: NL[];
 };
 
-const navLinks: LinkType[] = [
-  { text: 'Home', to: '/' },
-  { text: 'Blog', to: '/blog' },
-  { text: 'About', to: '/about' },
-  { text: 'Contact', to: '/contact' },
-  { text: 'Does not exist', to: '/foo-spam-eggs' }
-];
-
-export default function Nav() {
+export default function Nav({ navLinks }: Props) {
   return (
     <nav>
       <ul className="flex space-x-4 ">
-        {navLinks.map(({ text, to }, i) => {
+        {navLinks.map(({ content, target }, i) => {
           return (
             <li key={i}>
               <NavLink
                 end
-                to={to}
+                to={target.href}
                 className={({ isActive }) =>
                   isActive
                     ? 'underline decoration-primary underline-offset-4'
                     : ''
                 }
               >
-                {text}
+                {content.text}
               </NavLink>
             </li>
           );

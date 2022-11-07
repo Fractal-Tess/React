@@ -1,7 +1,7 @@
 import { type PropsWithChildren } from 'react';
-import ThemeWrapper from '$layout/ThemeWrapper';
-import Header from './Header';
-import Footer from './Footer';
+import ThemeWrapper from '$context/ThemeProvider';
+import Header from '$components/header/Header';
+import Footer from '$components/footer/Footer';
 import { Outlet } from 'react-router-dom';
 
 export default function BaseLayout({ children: page }: PropsWithChildren) {

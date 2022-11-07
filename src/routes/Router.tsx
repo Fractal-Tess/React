@@ -1,5 +1,5 @@
-import BaseLayout from '$layout/BaseLayout';
-import { Route, Routes } from 'react-router-dom';
+import BaseLayout from '$components/layout/BaseLayout';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '$routes/Home';
 import About from '$routes/About';
 import Blog from '$routes/Blog';
@@ -8,15 +8,17 @@ import NotFound from '$routes/NotFound';
 
 function Router() {
   return (
-    <Routes>
-      <Route element={<BaseLayout />}>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/blog" element={<Blog />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
-      </Route>
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<BaseLayout />}>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/blog" element={<Blog />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

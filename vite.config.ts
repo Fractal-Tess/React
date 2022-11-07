@@ -7,10 +7,10 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      $styles: path.join(__dirname, 'src/styles/index.css'),
-      $types: path.join(__dirname, 'src/types/index.ts'),
+      $styles: path.join(__dirname, 'src/styles'),
+      $types: path.join(__dirname, 'src/types'),
+      $data: path.join(__dirname, 'src/data'),
       $context: path.join(__dirname, 'src/context'),
-      $layout: path.join(__dirname, 'src/layout'),
       $assets: path.join(__dirname, 'src/assets'),
       $components: path.join(__dirname, 'src/components'),
       $routes: path.join(__dirname, 'src/routes')

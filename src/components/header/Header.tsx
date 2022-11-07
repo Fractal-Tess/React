@@ -2,10 +2,11 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
-import { ThemeCtx } from '$context/theme';
+import { ThemeCtx } from '$context/ThemeProvider';
 import ThemeToggle from '$components/theme/ThemeToggle';
-import Nav from '$layout/Nav';
+import HorizontalNav from '$components/nav/HorizontalNav';
 import Anchor from '$components/anchor/Anchor';
+import { navLinks } from '$data/navLink';
 
 export default function Header() {
   const themeCtx = useContext(ThemeCtx);
@@ -22,7 +23,7 @@ export default function Header() {
         </NavLink>
       </div>
 
-      <Nav />
+      <HorizontalNav navLinks={navLinks} />
 
       <div className="[&>*:hover]:text-primary [&>*]:duration-300 [&>*]:transition-colors flex items-center space-x-2">
         <Anchor
